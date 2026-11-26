@@ -4,6 +4,38 @@
 
 # Day 13 Lab — 2A202603323 - Bùi Sỹ Tùng
 
+## Bài nộp
+
+| Mục | Nội dung |
+|---|---|
+| Học viên | Bùi Sỹ Tùng · MSSV `2A202603323` · lớp L2 |
+| Task CVAT | `D13-2A202603323` (CVAT v2.82.0 trên máy cá nhân) |
+| 10 frame | s01f11, s01f40, s02f17, s02f40, s03f11, s03f33, s04f03, s04f45, s05f12, s05f45 |
+| Số cuboid | **63** (53 Car, 5 Truck, 2 Bus, 2 Cyclist, 1 Pedestrian) |
+| Mỗi frame | s01f11 = 8 · s01f40 = 5 · s02f17 = 6 · s02f40 = 5 · s03f11 = 7 · s03f33 = 5 · s04f03 = 7 · s04f45 = 6 · s05f12 = 8 · s05f45 = 6 |
+| Tự kiểm | 3/63 cuboid còn cảnh báo (giải thích ở báo cáo §5) |
+
+**File trong repo**
+
+- Báo cáo: [report/individual/2A202603323_BuiSyTung.md](report/individual/2A202603323_BuiSyTung.md)
+- Bảng A: [submission/D13-2A202603323-bangA.csv](submission/D13-2A202603323-bangA.csv), sinh bằng `python scripts/lab.py sync`, không sửa tay
+- Phiếu tự kiểm: [submission/D13-2A202603323-tukiem.csv](submission/D13-2A202603323-tukiem.csv)
+- Cấu hình: [configs/lab.ini](configs/lab.ini)
+
+11 ảnh chụp CVAT (`t1-…`, `t2-…`, `t4-…`) nộp riêng trên LMS trong `K5-L23-DAY13-2A202603323-images.zip`. Repo này **không** chứa dữ liệu VF hay ảnh camera.
+
+**Chạy lại** (cần dữ liệu VF đã giải nén và CVAT chạy ở `localhost:8080`):
+
+```powershell
+python scripts/lab.py dry                # kiểm dữ liệu, in 10 frame
+python scripts/lab.py sync               # xuất lại bảng A và phiếu tự kiểm từ CVAT
+python scripts/check_submission.py       # kiểm bài nộp
+```
+
+---
+
+*Phần dưới là giới thiệu của đề bài gốc.*
+
 <p align="center">
   <img alt="cá nhân" src="https://img.shields.io/badge/lab-cá%20nhân-0b1f3a">
   <img alt="thời lượng" src="https://img.shields.io/badge/thời%20lượng-4%20giờ-ff8a3d">
